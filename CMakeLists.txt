@@ -4,8 +4,7 @@ project(FastNoise)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
-file(GLOB_RECURSE SRC "."
-    "*.h"
-    "*.cpp"
+add_library(FastNoise
+    "FastNoise/FastNoise.h"
+    "FastNoise/FastNoise.cpp"
 )
-add_library(FastNoise STATIC ${SRC})
